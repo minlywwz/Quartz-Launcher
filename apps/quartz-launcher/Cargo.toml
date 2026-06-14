@@ -1,0 +1,39 @@
+[package]
+name = "quartz-launcher"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "quartz-launcher"
+path = "src/main.rs"
+
+[build-dependencies]
+tauri-build = { workspace = true }
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+tauri = { workspace = true }
+tauri-plugin-shell = { workspace = true }
+anyhow = { workspace = true }
+tokio = { workspace = true }
+parking_lot = { workspace = true }
+open = { workspace = true }
+once_cell = { workspace = true }
+single-instance = { workspace = true }
+dotenvy = { workspace = true }
+uuid = { workspace = true }
+dirs = { workspace = true }
+thiserror = { workspace = true }
+discord-rich-presence = { workspace = true }
+
+quartz-auth = { path = "../../crates/quartz-auth" }
+quartz-meta = { path = "../../crates/quartz-meta" }
+quartz-modplatforms = { path = "../../crates/quartz-modplatforms" }
+quartz-catalog = { path = "../../crates/quartz-catalog" }
+quartz-instance = { path = "../../crates/quartz-instance" }
+quartz-download = { path = "../../crates/quartz-download" }
+quartz-launch = { path = "../../crates/quartz-launch" }
+quartz-java = { path = "../../crates/quartz-java" }
+rfd = "0.15"
+sysinfo = "0.33"

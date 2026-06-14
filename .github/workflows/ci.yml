@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  check:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Install UI dependencies
+        run: npm ci --prefix apps/quartz-ui
+
+      - name: UI typecheck
+        run: npm run check --prefix apps/quartz-ui
+
+      - name: UI build
+        run: npm run build --prefix apps/quartz-ui
+
+      - name: Rust check
+        run: cargo check --workspace
+
+      - name: Clippy
+        run: cargo clippy --workspace -- -D warnings
+        continue-on-error: true

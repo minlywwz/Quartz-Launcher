@@ -1,0 +1,11 @@
+# npm lockfiles trigger full rebuilds and kill the Vite beforeDevCommand
+**/package-lock.json
+**/pnpm-lock.yaml
+**/yarn.lock
+
+# Frontend deps — Vite handles HMR; Rust watcher doesn't need these
+../quartz-ui/node_modules/**
+
+# Minecraft / mod logs during Play — tauri dev would restart and kill the window
+logs/**
+**/logs/**

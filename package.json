@@ -1,0 +1,16 @@
+{
+  "name": "quartz-launcher",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Quartz Launcher — Minecraft launcher with visionOS-inspired UI",
+  "scripts": {
+    "predev": "node scripts/free-port.mjs 1420",
+    "postinstall": "npm install --prefix apps/quartz-ui && npm install --prefix apps/quartz-launcher",
+    "dev:ui": "npm run dev --prefix apps/quartz-ui",
+    "build:ui": "npm run build --prefix apps/quartz-ui",
+    "dev": "npm run dev --prefix apps/quartz-launcher",
+    "build": "npm run build --prefix apps/quartz-launcher",
+    "check:rust": "cargo check --workspace",
+    "check:ui": "npm run check --prefix apps/quartz-ui"
+  }
+}

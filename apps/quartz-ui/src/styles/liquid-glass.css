@@ -1,0 +1,12 @@
+
+
+.liquid-panel {
+  background: var(--glass-panel-tint);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow-panel);
+}
+
+.liquid-control {
+  background: var(--control-bg);
+  border: 1px solid var(--control-border);
+}

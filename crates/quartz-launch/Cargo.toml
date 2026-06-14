@@ -1,0 +1,14 @@
+[package]
+name = "quartz-launch"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { workspace = true }
+thiserror = { workspace = true }
+uuid = { workspace = true }
+tokio = { workspace = true }
+
+quartz-auth = { path = "../quartz-auth" }
+quartz-instance = { path = "../quartz-instance" }
+quartz-meta = { path = "../quartz-meta" }

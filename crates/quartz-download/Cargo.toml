@@ -1,0 +1,11 @@
+[package]
+name = "quartz-download"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+reqwest = { workspace = true }
+tokio = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+sha1 = { workspace = true }

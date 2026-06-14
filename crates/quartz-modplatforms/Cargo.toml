@@ -1,0 +1,14 @@
+[package]
+name = "quartz-modplatforms"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { workspace = true }
+reqwest = { workspace = true }
+tokio = { workspace = true }
+thiserror = { workspace = true }
+urlencoding = { workspace = true }
+zip = { workspace = true }
+quartz-download = { path = "../quartz-download" }
+serde_json = { workspace = true }

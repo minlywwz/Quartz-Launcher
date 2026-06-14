@@ -1,0 +1,225 @@
+
+
+[general]
+
+	help_link = "CHANGE_ME"
+
+	formulation_type = "DISCORD"
+
+	upload_to = "gnomebot.dev"
+
+	show_on_fml_error_screen = true
+
+	kill_old_app = true
+
+	default_lang = "en_us"
+
+	priority_lang_for_overrides = "NONE"
+
+	generate_localization_overrides_folder_with_readme = true
+
+	prevent_upload_buttons_delay = false
+
+	enable_privacy_policy_acceptance = true
+
+	enable_mclogs_anti_ip_like_version_censorer = true
+
+	prevent_generating_crash_assistant_app_logs = false
+
+	generate_own_launcher_log = true
+
+	win_event_is_crash = false
+
+	logs_priority_overrides = []
+
+	blacklisted_logs = []
+
+[simple_mode]
+
+	enabled = false
+
+	prevent_for_modpack_creators = true
+
+	hide_modlist_section = false
+
+[text]
+
+	support_name = "example Discord"
+
+	support_place = "#example channel"
+
+	modpack_name = "Minecraft"
+
+[generated_message]
+
+	prefix = "### "
+
+	logs_separator = "   |   "
+
+	intel_corrupted_notification = true
+
+	piracy_notification = true
+
+	generated_msg_lang = "en_us"
+
+	text_under_crashed = ""
+
+	warning_after_upload_all_button_press = ""
+
+	put_problematic_frame_to_message = true
+
+	put_analysis_result_to_message = true
+
+	color_message = true
+
+	message_structure = "$HEADER$$TEXT_UNDER_CRASHED$$PREFIX$$LOGS$\n$PROBLEMATIC_FRAME$$ANALYSIS_RESULT$$MODLIST_DIFF$"
+
+	log_line_pattern = "$LOG_NAME$[$FILE_NAME$](<$LINK$>)"
+
+	log_line_split_pattern = "$LOG_NAME$[$FILE_NAME$ <TOLOWER>$MSG_LANG.gui.split_log_dialog_head$</TOLOWER>](<$LINK_FIRST_LINES$>) / [<TOLOWER>$MSG_LANG.gui.split_log_dialog_tail$</TOLOWER>](<$LINK_LAST_LINES$>) $TOO_BIG_REASONS$"
+
+	ansi_block_pattern = "$PREFIX$$HEADER$\n```ansi\n$CONTENT$\n```"
+
+	problematic_frame_pattern = "```java\n$CONTENT$\n```"
+
+	link_notification_pattern = "[$TEXT$](<$LINK$>)"
+
+	modlist_header_pattern = "[$PART1$](<$LINK$>)$PART2$"
+
+[copied_links]
+
+	single_link = "$LOG_NAME$$FILE_NAME$: $LINK$"
+
+	single_link_split = "$LOG_NAME$$FILE_NAME$($HEAD_OR_TAIL$): $LINK$ $TOO_BIG_REASONS$"
+
+	both_links_split = "$LOG_NAME$[$FILE_NAME$ <TOLOWER>$MSG_LANG.gui.split_log_dialog_head$</TOLOWER>](<$LINK_FIRST_LINES$>) / [<TOLOWER>$MSG_LANG.gui.split_log_dialog_tail$</TOLOWER>](<$LINK_LAST_LINES$>) $TOO_BIG_REASONS$"
+
+	skip_split_dialog = false
+
+[modpack_modlist]
+
+	enabled = true
+
+	modpack_creators = []
+
+	auto_update = true
+
+	add_resourcepacks = false
+
+	add_datapacks = false
+
+	add_modloader_jar_name = true
+
+	add_modlist_txt_as_log = true
+
+[too_many_changes_warning]
+
+	count = -1
+
+	formulation_type = "NOTIFY"
+
+[analysis]
+
+	enabled = true
+
+	trigger_on_original_modpack_mods = false
+
+	first_show_delay = 10
+
+	blacklisted_reasons = []
+
+[analysis_tools]
+
+	enabled = true
+
+	blacklisted_tools = []
+
+[crash_command]
+
+	enabled = true
+
+	seconds = 10
+
+[intel_corrupted]
+
+	enabled = true
+
+[piracy]
+
+	enabled = false
+
+	delay = 10
+
+[greeting]
+
+	shown_greeting = false
+
+[scripts]
+
+	enabled = true
+
+	ide_enabled = true
+
+	generate_scripts_folder_with_example = true
+
+	attach_startup_scripts_log_only_on_error = true
+
+[gui_customisation]
+
+	theme_file_name = "FlatLightLaf"
+
+	disable_upload_all_button = false
+
+	show_dont_send_screenshot_of_gui_notice = true
+
+	screenshot_of_gui_notice_animated_border = true
+
+	upload_all_button_font_size = 16
+
+	request_help_button_font_size = 16
+
+	simple_mode_button_font_size = 16
+
+	upload_all_button_foreground_color = "0_178_0"
+
+	request_help_button_foreground_color = "0_0_178"
+
+	simple_mode_button_foreground_color = "0_0_178"
+
+	auto_fix_button_font_size = 16
+
+	auto_fix_button_foreground_color = "0_178_0"
+
+	privacy_policy_yes_button_foreground_color = "0_178_0"
+
+	privacy_policy_no_button_foreground_color = "255_0_0"
+
+	screenshot_of_gui_notice_animated_border_color = "255_0_0"
+
+	screenshot_of_gui_notice_text_color = "255_0_0"
+
+	blinking_button_success_color = "100_255_100"
+
+	blinking_button_attention_color = "100_100_255"
+
+	blinking_button_error_color = "255_100_100"
+
+	modpack_logo_path = ""
+
+	modpack_logo_large_mode = false
+
+	limit_modpack_logo_height = -1
+
+	modpack_logo_aligned_center = true
+
+[compatibility]
+
+	enabled = true
+
+[debug]
+
+	crash_after_init = false
+
+[patches]
+
+	MC307905 = true
